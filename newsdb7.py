@@ -1,4 +1,4 @@
-#In order to run this python code, create views with the following SQL commands:
+# In order to run this python code, create views with the following SQL commands:
 
 #create view author_slug as
 #        select authors.name, articles.slug
