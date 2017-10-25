@@ -74,3 +74,24 @@ Days in which 404 errors accounted for >1% of requests:
 
 
 -----------------------------------
+
+<!--Developer Notes-->
+
+# In order to run this python code, create views with the following SQL commands:
+
+create view author_slug as
+        select authors.name, articles.slug
+        from articles, authors
+        where articles.author = authors.id;
+        
+create view error_view as
+        select count(*)::numeric as num, time::date as day
+        from log
+        where status != '200 OK'
+        group by day
+        order by day desc;
+        
+create view total_view as
+        select count(*)::numeric as num, time::date as day
+        from log
+        group by day;
