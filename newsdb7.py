@@ -13,10 +13,11 @@ def connect():
         connection = psycopg2.connect(database=DB_NAME)
         cursor = connection.cursor()
         return connection, cursor
-        except psycopg2.Error as e:
+    except psycopg2.Error as e:
             print("Error with connection to the PostgreSQL database"
                   "as defined by newsdb7.py function connect in line #33")
             sys.exit(1)
+
 
 # My runTheSearch function will return the results of the three main
 # questions. In this specific instance, it will answer
@@ -27,6 +28,7 @@ def runTheSearch(questionsFromBoss):
     results = cursor.fetchall()
     connection.close()
     return results
+
 
 # Question #1: Proposes to answer the question regarding
 # "the top three views articles in the news database."
@@ -45,6 +47,7 @@ def topThreeArticlesInNewsDatabase():
         print("\"" + item[0].title() + "\" = " +
               str("{:,}".format(item[1])) + "views")
 
+
 # Question #2: Proposes to answer the question concerning "the most popular
 # authors in the news database" fetched from the total views of each
 # news article.
@@ -58,9 +61,10 @@ def mostPopularAuthorsInNewsDatabase():
         order by count(log.path) desc;"""
     )
     print('\n\n' + "The top authors in the news"
-           "database are as follows:" + '\n')
+          "database are as follows:" + '\n')
     for item in results:
         print(item[0] + ": " + str("{:,}".format(item[1])) + "views")
+
 
 # Question #3: Proposes to answer the question of days with more
 # than 1% of 404 error_days
