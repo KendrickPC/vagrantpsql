@@ -115,3 +115,6 @@ create view total_view as
         select count(*)::numeric as num, time::date as day
         from log
         group by day;
+
+
+Except Line 16 changed
