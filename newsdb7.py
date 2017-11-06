@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 
 
 # https://wiki.postgresql.org/wiki/Using_psycopg2_with_PostgreSQL
