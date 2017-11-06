@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+
+
 # https://wiki.postgresql.org/wiki/Using_psycopg2_with_PostgreSQL
 # we import sys for the sys exit(1) code
 import psycopg2
@@ -75,11 +78,11 @@ def error_days():
         join error_view on total_view.day=error_view.day
         where (error_view.num/total_view.num)*100 > 1;"""
         )
-print('\n\n' + "Days in which 404 errors accounted for >1% of "
+    print('\n\n' + "Days in which 404 errors accounted for >1% of "
                "requests:" + '\n')
 for errday, errpercent in results:
     print(str(errday) + ": " + str(round(errpercent, 2)) + "%")
-print('\n')
+    print('\n')
 
 if __name__ == "__main__":
     print('\n' + "")

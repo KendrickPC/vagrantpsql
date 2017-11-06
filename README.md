@@ -117,4 +117,16 @@ create view total_view as
         group by day;
 
 
-Except Line 16 changed
+<!-- Except Line 16 changed -->
+
+<!-- In Unix, an executable file that's meant to be interpreted can indicate what interpreter to use by having a #! at the start of the first line, followed by the interpreter (and any flags it may need).
+
+If you are using python 2.7
+
+#! /usr/bin/env python
+or if you are using python 3+
+
+#! /usr/bin/env python3
+If you have several versions of Python installed, /usr/bin/env will ensure the interpreter used is the first one on your environment's $PATH. -->
+
+<!-- Last two print statements indented -->
