@@ -1,7 +1,7 @@
 ##### September 20th, 2017:
 
 # Logs Analysis Project
-  This project uses python3 to interact with a PostgreSQL database containing information from a newspaper site. The Python3 module document entitled: newsdb7.py. newsdb7.py python code used as a reporting tool to answer the following questions:
+  This project uses python3 to interact with a PostgreSQL database containing information from a newspaper site. The Python3 module document entitled: newsdb7.py. newsdb.py python code used as a reporting tool to answer the following questions:
 
   1. What are the top three (3) news articles in the database?
   2. Who are the most popular authors in the news database?
@@ -23,7 +23,7 @@
   5. Place the newsdata.sql file into the vagrantpsql folder (the folder downloaded from the following github repository link: https://www.google.com)
         * Your vagrantpsql folder should now contain the following files:
             - vagrantfile
-            - newsdb7.py
+            - newsdb.py
             - createviews.sql
             - newsdata.sql
             - README.md
